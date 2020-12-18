@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurfCamp</title>
+    <link rel="shortcut icon" href="img/scamplogo.jpg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,900;1,100&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <header class="site-header">
+        <div class="logo">
+        <h1 class="no-margin">Surf <span>Camp</span> & <span>Hostel</span> Miramar</h1>
+        </div>
+        <nav class="barra contenedor ef2">
+            <a href="index.html">Principal</a>
+            <a href="Lugar.html">Lugar</a>
+            <a href="precios.html">Precios</a>
+            <a href="ubicacion.html">Ubicación</a>
+        </nav>
+    </header>
+
+
+
+    <main class="main-precios">
+       
+       <section class="precios">
+       <ul class="precios-trip">
+             <h3>Surf Camp Trips</h3>
+           <li><i class="fas fa-home"></i> Hospedaje<span class="numero-span"> 4</span> Dias y <span class="numero-span">2</span> Noches</li>
+           <p>Cabaña en el bosque <br> <span class="numero-span">SurfCamp & Hostel Miramar</span></p>
+           <li><i class="fas fa-sun"></i> Te llevas <span class="numero-span">4 </span>Clases de surf de <span class="numero-span">2</span> Horas</li>
+           <p>Incluye traje termico - tabla en <br> <span class="numero-span">Escuela de surf y arte</span></p>
+           <li><i class="fas fa-utensils"></i> Desayuno almuerzo y cena</li>
+           <p><span class="alimentos">Asado - Veggie - Pizzas - Fogon - Bar</span></p>
+           <p class="fecha"><i class="fas fa-calendar-check"></i> Del <span class="numero-span">30 </span>de diciembre  al <span class="numero-span">30 </span>de enero</p>
+           <h4 class="precio-trip">$18.900</h4>
+           
+       </ul>
+        <ul class="precios-sueltos">
+            <li>Precio por Noche con desayuno: <span class="numero-span">1500$</span> </li>
+            <li>Precio por Noche con Desayuno - Amuerzo y Cena: <span class="numero-span"> 2300$</span></li>
+            <li><span class="adicional">Adicional</span> clase de surf: <span class="numero-span">1800$</span></li>
+        </ul>
+
+       <ul class="precios-dia">
+           <h3>Cotiza tu estadia</h3>
+           <li>Dias:  <input type="number" value="0" min="0" size="3" id="precio-dia" ></li>
+            <li>Noches: <input type="number" value="0" min="0" size="3" id="precio-noche" > </li>
+            <li>Noche y 3 comidas: <input type="number" value="0" min="0" size="3" id="precio-almuerzo" ></li>
+            <input type="button" id="calcular" value="Calcular" class="btnPrecio">
+            <div class="total">
+               
+                <p>Resumen:</p>
+                <div id="lista-estadia" class="resumen">
+
+                </div>
+                <p>Total:</p>
+                <div id="suma-total" class="precioTotal">
+
+                </div>
+            </div>        
+       </ul>
+   
+    </section>
+    </main>
+    <section class="contactos">
+        <ul class="whatsapp no-margin no-padding">
+            <h3 >Contactanos en:</h3>
+            <li><i class="fab fa-instagram-square"></i><span><a href="https://www.instagram.com/surfcamp_hostel_miramar/">SurfCamp</a></span></li>
+            <li><i class="fab fa-facebook-square"></i><span><a href="https://www.facebook.com/SURFCAMPMIRAMAR">SurfCamp</a></span></li>
+            <li><i class="fab fa-whatsapp-square"></i><span>02291 45-0668</span></li>
+        </ul>
+    </section>
+    <script src="https://kit.fontawesome.com/f69e951070.js" 
+    crossorigin="anonymous"></script>
+  
+    <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
