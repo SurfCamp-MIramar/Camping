@@ -1,2 +1,2 @@
-# Camping
-Hostel en miramar
+# SurfCamp
+Hostel & Camping en miramar
