@@ -824,9 +824,17 @@ div.logo {
 }
 .hero-layout {
     display: grid;
+   
     padding: 25px;
 }
-
+.hero-layout img {
+     width: 100%;
+}
+.script-wind  {
+    display: flex;
+    border: 3px solid black;
+    margin: 1rem 0;
+}
 @media (min-width: 968px) {
     .hero-layout {
         display: initial;
