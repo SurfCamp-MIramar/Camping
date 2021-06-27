@@ -1,61 +1,47 @@
+'use strict'
 
-(function() {
-    "use strict";
+window.addEventListener('load', function(){
 
-    document.addEventListener('DOMContentLoaded', function(){
+    var formulario = document.querySelector('#form-contacto');
 
-
-// Cotizador
-var precioDia = document.getElementById('precio-dia');
-var precioNoche = document.getElementById('precio-noche');
-var precioAlmuerzo = document.getElementById('precio-almuerzo');
-// botones y divs
-var listaEstadia = document.getElementById('lista-estadia');
-var totalCotizado = document.getElementById('suma-total');
-var calcular = document.getElementById('calcular');
-
-// mapa
-var map = document.getElementById('mapid');
+    formulario.addEventListener('submit', function(){
+        
 
 
-calcular.addEventListener('click', cotizarPrecio);
+    var enviarForm = document.querySelector('#formEnviar');
+    var errorForm = document.querySelector('#errorForm');
 
-function cotizarPrecio(event){
-    event.preventDefault();
-    if(precioDia.value === ''){
-        alert('Para cotizar elegi al menos un dia o introduci un caracter valido');
-        precioDia.focus();
-    } else {
-        var precio_Dias = parseInt(precioDia.value, 10)|| 0,
-            precio_Noches = parseInt(precioNoche.value, 10)|| 0,
-            precio_Almuerzos = parseInt(precioAlmuerzo.value, 10)|| 0;
+    var numero = 5492291450668;
+    var nombre = document.querySelector('#nombre').value
+    var apellido = document.querySelector('#apellido').value;
+    var mensaje = document.querySelector('#textarea').value;
+    
+            if (nombre.trim() == null || nombre.trim().length == 0) {
+            errorForm.style.display = 'block';
+            errorForm.innerHTML = "Por favor, introducí tu nombre correctamente";
+            return false;
+        } else if (apellido.trim() == null || apellido.trim().length == 0) {
+            errorForm.innerHTML = "Por favor, Introducí tu apellido correctamente";
+             errorForm.style.display = 'block';
+            return false;
+        }
+        else if (mensaje.trim() == null || mensaje.trim().length == 0){
+            errorForm.style.display = 'block';
+            errorForm.innerHTML = "Escribe tu mensaje";
+            return false;
+        } 
+        else {
+            errorForm.style.display = 'none';
+        }
+        const enviarMensaje = () => {
+            var win = window.open(`https://wa.me/${numero}?text=Hola%20soy%20${nombre}%20${apellido}, Consulta:%20${mensaje}`, '_blank');
+        }
 
-    var totalPagar = (precio_Dias * 1500) + (precio_Noches * 1500 ) + (precio_Almuerzos * 2300);
+           enviarForm.addEventListener('click', enviarMensaje);
+    });
 
-            var listadoProductos = [];
+formulario.event.preventDefault();
 
-            if(precio_Dias > 0){
-                listadoProductos.push(precio_Dias + ' Dias');
-            }
-            if(precio_Noches > 0){
-                listadoProductos.push(precio_Noches + ' Noches');
-            }
-            if(precio_Almuerzos > 0){
-                listadoProductos.push(precio_Almuerzos + ' Noches + Comidas');
-            }
-            var resultado= '';
+});
 
-       listaEstadia.style.display = "block";
-       listaEstadia.innerHTML = '';
 
-       for(var i = 0; i < listadoProductos.length; i++) {
-        listaEstadia.innerHTML += listadoProductos[i] + '<br>';
-       }
-       totalCotizado.innerHTML = "$ " + totalPagar.toFixed(2);
-
-    }
-
-}
-
-}); // DOM 
-})();
