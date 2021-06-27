@@ -1,71 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SurfCamp</title>
-    <link rel="shortcut icon" href="img/scamplogo.jpg" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,900;1,100&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,900;1,100&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estilos.css">
+
+
+
 </head>
+
 <body>
-    
+
     <header class="site-header">
         <div class="logo ">
-             <h1 class="no-margin">Surf <span>Camp</span> & <span>Hostel</span> Miramar</h1>
+            <h1 class="no-margin">Surf <span>Camp</span> & <span>Hostel</span> Miramar</h1>
         </div>
         <nav class="barra contenedor ef2">
             <a href="index.html">Principal</a>
-            <a href="Lugar.html">Lugar</a>
-            <a href="precios.html">Precios</a>
-            <a href="ubicacion.html">Ubicación</a>
+            <a href="#lugar">Lugar</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </header>
-
-
-    <main class="main-nosotros">
-        <div class="layout-nosotros">
-          
-            <div class="layout-adentro">
-                <img src="img/scamnosotros2-min.jpg" alt="Vista aerea del hostel parque bristol">
-                <img src="img/chach3-min.jpg" alt="Casa con decoracion de piedra en el bosque">
-                <img src="img/chach5-min.jpg" alt="Atardecer rojo en el campo">
-                <img src="img/chach4-min.jpg" alt="Grom surfeando">
-                <img src="img/chach2-min.jpg" alt="Patio de atras camino de piedra del hostel">
-                <img src="img/scampnosotros1-min.jpg" alt="flores del surfcamp">
+    <div class="carrusel-flex">
+        <div class="my-slider" id="autoplay">
+            <div class="slide-item">
+                <img src="img/chach3.jpg" alt="">
+             </div>
+            <div class="slide-item">
+                <img src="img/surfcamp1.jpg" alt="">
             </div>
-      
+            <div class="slide-item">
+                <img src="img/surfcamp5.jpg" alt="">
+            </div>
+            <div class="slide-item">
+                <img src="img/scamp10.png" alt="">
+            </div>
+            <div class="slide-item">
+                <img src="img/scamp11.jpg" alt="">
+            </div>
+
+            <div class="slide-item">
+                <img src="img/scampnosotros1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <main class="">
+        <section class="seccion-principal contenedor">
+             <article class="principal-dos contenedor">
+                <div class="principal-mapa">
+                    <div id="map"></div>
+                </div>
+                
+            <div class="principal-texto1">
+                <h3>
+                    <span class="bosque"> Hostel en el bosque </span><br>
+                    <br>
+                    Pasate los mejores días de sol, mar y surf.<br>
+                    A 5 minutos del centro de la ciudad y 9 cuadras de la playa, está ubicado el surfcamp, en parque bristol
+                    un lugar considerado reserva forestal. Rodeate de la naturaleza y tranquilidad que el bosque brinda.
+                </h3>
+            </div>
+            </article> 
+
+            <article class="principal-uno">
+                
+                <div class="principal-img">
+                  
+                </div>
+            </article>
+        </section>
+    </main>
+    <!--FIN MAIN-->
+
+    <div class="transicion b-1" id="lugar">
+        <p><span class="lugar-span">Nuestro</span> Lugar</p>
+    </div>
+
+    <!--LUGAR-->
+    <div class="lugar-background">
+
+    
+    <section class="seccion-lugar" >
+        <div class="lugar-texto3">
+            <h3><p>Cabaña con amplio living, sala de juegos, habitaciones compartidas y privadas.</p></h3>
+        </div>
+            <div class="fotos-grid contenedor">
+                <div class="item">
+                    <img src="img/surfcamp7.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/surfcamp6.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/scamp22.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/scamp21.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/scamp20.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/scamp19.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/scamp18.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="img/scamp17.jpg" alt="">
+                </div>
+            </div>
+    </section>
+    <section class="seccion-servicios">
+        <article class="articulo-servicios" >
+               <div class="transicion" id="servicios">
+                   <p>Servicios</p>
+               </div>
+            <ul class="servicios-lista contenedor">
+                <li>wifi gratis! <img src="icons/icons8-wi-fi-30.png" alt=""></li>
+                <li>cocina <img src="icons/icons8-kitchen-room-30.png" alt=""></li>
+                <li>microondas <img src="icons/icons8-microwave-30.png" alt=""></li>
+                <li>heladera <img src="icons/icons8-fridge-30.png" alt=""></li>
+                <li>vajilla <img src="icons/icons8-food-30.png" alt=""></li>
+                <li>limpieza <img src="icons/icons8-housekeeping-30.png" alt=""></li>
+                <li>parque <img src="icons/icons8-hammock-30.png" alt=""></li>
+                <li>parrila <img src="icons/icons8-grill-30.png" alt=""></li>
+                <li>juegos <img src="icons/icons8-ping-pong-30.png" alt=""></li>
+                <li>desayuno <img src="icons/icons8-kawaii-croissant-30.png" alt=""></li>
+                <li>aceptamos mascotas <img src="icons/icons8-dog-30.png" alt=""></li>
+                <li>estacionamiento <img src="icons/icons8-car-30.png" alt=""></li>
+            </ul>
+        </article>
+    </section>
+    <footer class="footer-entrada">
+        <div class="footer-flex">
+                
+            <form action="#" onsubmit="return false"; method="post" class="form" id="form-contacto">
+                <legend>Contactanos</legend>
+                <div class="form-contenedor" id="contacto">
+                    <div class="form-error" id="errorForm"><p></p></div>
+                    <div class="campo">
+                        <label for="nombre" >Nombre</label>
+                        <input type="text" id="nombre" placeholder="Tu nombre">
+                    </div>
+                    <div class="campo">
+                        <label for="apellido" >Apellido</label>
+                        <input type="text" id="apellido" placeholder="Tu apellido">
+                    </div>
+                    <div class="campo w-100">
+                        <label for="textarea">Reservas</label>
+                        <textarea name="textarea" id="textarea" placeholder="Envianos tu mensaje"></textarea>
+                    </div>
+                  <button  type="submit" id="formEnviar" class="btn" value="Enviar" >Enviar </button>
+                </div>
+                 
+            </form>
+            <nav class="footer-nav">
+                <a href="https://www.facebook.com/SURFCAMPMIRAMAR"><img src="icons/icons8-facebook-30.png" alt="">Facebook </a>
+                <a href="https://www.instagram.com/surfcamp_hostel_miramar/"><img src="icons/icons8-instagram-30.png" alt="">Instagram </a>
+            </nav>
+            <blockquote > surfcamp & hostel &copy; todos los derechos reservados </blockquote>
+            
         </div>
         
-        <div class="texto-nosotros">
-            <div class="hero-layout">
-                <img src="img/surfcamp2-min.jpg" alt="Surfer argentino en olon de invierno">
-            </div>
-            <h2>A 400km de bs as y 40km de mar del Plata, llegas a <span class="mira">Miramar</span>. Un paraíso de olas azules</h2>
-        </div>
-   
-    </main>
- 
-    <section class="contactos">
-        <ul class="whatsapp no-margin no-padding">
-            <h3 >Contactanos en:</h3>
-            <div class="item-contactos">
-                <img src="img/igm.png" alt="">
-                <li><a href="https://www.instagram.com/surfcamp_hostel_miramar/"> <span> SurfCamp</span></a></li>
-            </div>
-             <div class="item-contactos">
-                <img src="img/fcb.png" alt="">
-                <li><a href="https://www.facebook.com/SURFCAMPMIRAMAR"> <span> SurfCamp</span></a></li>
-             </div>
-             <div class="item-contactos">
-                 <img src="img/wsp.png" alt="">
-                 <li> <span> 02291 45-0668</span></li>
-             </div>        
-        </ul>
-    </section>
+    </footer>
+    </div>
+
+
+<!--
+    SCRIPTS
+-->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script>
+   var slider = tns({
+   container: '#autoplay',
+   items: 3,
+   speed: 2500,
+   autoplay: true,
+   autoplayHoverPause: true,
+   autoplayTimeout: 2000,
+   gutter: 3,
+   touch: true,
+   center: true,
+    mouseDrag: true,
+    controls: false,
+    autoplayButtonOutput: false,
+    responsive: {
+    300: {
+         items: 2,
+         edgePadding: 5
+    },
+    640: {
+    gutter: 13,
+    items: 2
+    },
+    700: {
+    gutter: 13
+    },
+    900: {
+    items: 4,
+    gutter: 5
+    }
+    },
+   });
+</script>
+<script src="js/scripts.js"></script>
+<script src="js/map.js"></script>
 </body>
 </html>
