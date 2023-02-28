@@ -11,7 +11,7 @@ window.addEventListener('load', function(){
     var enviarForm = document.querySelector('#formEnviar');
     var errorForm = document.querySelector('#errorForm');
 
-    var numero = 5492291450668;
+    var numero = 5492291518654;
     var nombre = document.querySelector('#nombre').value
     var apellido = document.querySelector('#apellido').value;
     var mensaje = document.querySelector('#textarea').value;
